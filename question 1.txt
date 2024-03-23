@@ -1,0 +1,40 @@
+class Queue:
+    constructor():
+        queue_array = []
+
+    method Enqueue(element):
+        queue_array.append(element)
+
+    method Dequeue():
+        if queue_array is empty:
+            return "Queue is empty"
+        else:
+            removed_element = queue_array[0]
+            remove first element from queue_array
+            return removed_element            
+ Enqueue operation: O(1) 
+ Dequeue operation: O(n)
+
+
+class MaxPriorityQueue:
+    constructor():
+        queue_array = []
+
+    method Enqueue(element, priority):
+        # Add element and its priority to the end of the queue_array as a tuple (element, priority)
+        queue_array.append((element, priority))
+
+    method Dequeue():
+        if queue_array is empty:
+            return "Queue is empty"
+        else:
+            max_priority_element = None
+            max_priority_index = None
+            for i from 0 to length(queue_array) - 1:
+                if max_priority_element is None or queue_array[i][1] > max_priority_element[1]:
+                    max_priority_element = queue_array[i]
+                    max_priority_index = i
+            remove element at max_priority_index from queue_array
+            return max_priority_element                
+  Enqueue operation: O(1)
+  Dequeue operation: O(n)

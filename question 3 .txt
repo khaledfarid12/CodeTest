@@ -1,0 +1,18 @@
+def findMiddleNodes(head):
+    slow = head
+    fast = head
+    prev_slow = None
+
+    while fast is not None and fast.next is not None:
+        prev_slow = slow
+        slow = slow.next
+        fast = fast.next.next
+  # if even 
+    if fast is None:
+        return prev_slow, slow
+  #if odd
+    else:
+        return slow                
+
+  Time Complexity=O(n)
+ Space Complexity=O(1)

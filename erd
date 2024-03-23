@@ -1,0 +1,23 @@
+ERd Schema for the Application
+
+
+User
+-----------
+user_id (PK)
+username
+
+Post
+-----------
+post_id (PK)
+user_id (FK to User)
+title
+body
+created_at
+
+Review
+-----------
+review_id (PK)
+post_id (FK to Post)
+user_id (FK to User)
+rating
+comment
